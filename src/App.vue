@@ -34,8 +34,8 @@ export default defineComponent ({
             <div v-if="condition" class="lg:text-[24px] md:text-[18px] text-[13px] text-white font-bold">"{{ advice }}"</div>
             <div v-else class="lg:text-[24px] md:text-[18px] text-[13px] text-white font-bold">"{{ advice.advice }}"</div>
             <img class="pb-[3rem]" src="./assets/images/pattern-divider-desktop.svg" alt="">
-            <div class="absolute bottom-[-2.5rem] flex p-[1rem] items-center justify-center rounded-[50%] anime">
-                <div class="p-[1rem] flex items-center justify-center rounded-[50%] bg-[#4dda96] hover:cursor-pointer"  @click="open">
+            <div class="absolute bottom-[-1.5rem] flex items-center justify-center rounded-[50%]">
+                <div class="p-[1rem] flex items-center justify-center rounded-[50%] bg-[#4dda96] hover:cursor-pointer anime"  @click="open">
                     <img src="./assets/images/icon-dice.svg" alt="">
                 </div>
             </div>
@@ -44,7 +44,7 @@ export default defineComponent ({
 </template>
 
 <style>
-    .anime {
-        background: radial-gradient(circle to center, #3a7164 0deg, #365455 360deg);
+    .anime:hover {
+        box-shadow: 3px 3px 25px #4dda96, -3px -3px 25px #4dda96;
     }
 </style>
